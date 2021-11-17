@@ -19,7 +19,9 @@
     "strict": true,
     "target": "es2017",
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "exclude": ["dist", "node_modules", "test/types"],
   "include": ["src/**/*", "types/**/*"]
