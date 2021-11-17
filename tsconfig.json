@@ -8,7 +8,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "lib": ["es6"],
-    "module": "commonjs",
+    "module": "ESNext",
     "moduleResolution": "node",
     "noEmit": true,
     "noEmitOnError": false,
@@ -18,6 +18,7 @@
     "sourceMap": false,
     "strict": true,
     "target": "es2017",
+    "importHelpers": false,
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
