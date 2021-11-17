@@ -15,7 +15,9 @@ const config = {
   ],
 
   plugins: [
-    nodeResolve(),
+    nodeResolve({
+      preferBuiltins: true
+    }),
     commonjs(),
     typescript({ tsconfig: './tsconfig.json' })
   ]
