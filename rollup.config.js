@@ -8,8 +8,8 @@ const config = {
   output: [
     {
       file: pkg.main,
-      format: 'cjs',
-      exports: 'auto'
+      format: 'cjs'
+      // exports: 'auto'
     },
     { format: 'esm', file: pkg.module }
   ],
@@ -19,7 +19,7 @@ const config = {
       preferBuiltins: true
     }),
     commonjs(),
-    typescript({ tsconfig: './tsconfig.json' })
+    typescript({ tsconfig: './tsconfig.build.json' })
   ]
 }
 
