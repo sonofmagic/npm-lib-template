@@ -6,7 +6,7 @@
     "declaration": true,
     "declarationDir": "types",
     "allowSyntheticDefaultImports": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]

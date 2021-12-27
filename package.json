@@ -6,10 +6,12 @@
   "module": "dist/index.es.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "build": "rollup -c",
-    "build:tsc": "tsc --build tsconfig.json",
+    "dev": "cross-env NODE_ENV=development rollup -c",
+    "build": "cross-env NODE_ENV=production rollup -c",
+    "build:tsc": "cross-env NODE_ENV=development tsc --build tsconfig.json",
     "test": "jest",
-    "init:rename": "node scripts/init/rename.js"
+    "init:rename": "node scripts/init/rename.js",
+    "clean": "node scripts/clean.js"
   },
   "repository": {
     "type": "git",
@@ -40,6 +42,8 @@
     "@types/node": "^17.0.5",
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
+    "cross-env": "^7.0.3",
+    "del": "^6.0.0",
     "eslint": "8.5.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "2.25.3",
