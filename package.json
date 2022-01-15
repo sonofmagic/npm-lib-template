@@ -6,7 +6,7 @@
   "module": "dist/index.es.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development rollup -c",
+    "dev": "cross-env NODE_ENV=development rollup -cw",
     "build": "cross-env NODE_ENV=production rollup -c",
     "build:tsc": "cross-env NODE_ENV=development tsc --build tsconfig.json",
     "test": "jest",
