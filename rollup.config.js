@@ -24,7 +24,8 @@ const config = {
     }),
     commonjs(),
     typescript({ tsconfig: './tsconfig.build.json' })
-  ]
+  ],
+  external: [...(pkg.dependencies ? Object.keys(pkg.dependencies) : [])]
 }
 
 export default config
