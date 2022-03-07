@@ -12,8 +12,8 @@ const config = {
     {
       file: pkg.main,
       format: 'cjs',
-      sourcemap: isDev
-      // exports: 'auto'
+      sourcemap: isDev,
+      exports: 'auto'
     },
     { format: 'esm', file: pkg.module, sourcemap: isDev }
   ],
@@ -23,7 +23,7 @@ const config = {
       preferBuiltins: true
     }),
     commonjs(),
-    typescript({ tsconfig: './tsconfig.build.json' })
+    typescript({ tsconfig: './tsconfig.build.json', sourceMap: isDev })
   ],
   external: [...(pkg.dependencies ? Object.keys(pkg.dependencies) : [])]
 }
