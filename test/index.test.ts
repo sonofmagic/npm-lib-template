@@ -1,4 +1,4 @@
-import { foo, wait } from '../src'
+import { foo, wait } from '@/index'
 
 describe('[Default]', () => {
   test('foo should be bar', () => {

@@ -7,3 +7,5 @@ export const wait = (timeout?: number) => {
     }, timeout)
   })
 }
+
+export * from '@/util'
