@@ -9,8 +9,18 @@
 
 ## scripts
 
+### rename
+
 执行 `npm run init:rename`
  
 作用为替换 `package.json` 中默认包含的所有名称为 `npm-lib-template` 的字段
 
 默认替换为新建代码仓库的文件夹名称！
+
+### bin
+
+执行 `npm run init:bin`
+ 
+作用为 `package.json`  添加 `files` 和 `bin`，同时生成 `bin/{{pkg.name}}.js` 和 `src/cli.ts` 文件
+
+
