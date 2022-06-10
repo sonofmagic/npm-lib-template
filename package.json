@@ -4,7 +4,7 @@
   "description": "npm-lib-template",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "types": "dist/types/index.d.ts",
+  "types": "types/index.d.ts",
   "scripts": {
     "dev": "yarn dts && cross-env NODE_ENV=development rollup -cw",
     "build": "yarn clean && yarn dts && cross-env NODE_ENV=production rollup -c",
@@ -20,7 +20,8 @@
     "url": "git+https://github.com/sonofmagic/npm-lib-template.git"
   },
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "publishConfig": {
     "access": "public",
