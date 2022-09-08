@@ -1,5 +1,4 @@
-const del = require('del')
-
+import { deleteAsync } from 'del'
 // 同时兼容 `yarn clean` and `yarn clean xxx yyy zzz`
 ;(async () => {
   const dirs = process.argv.slice(2)
@@ -7,6 +6,6 @@ const del = require('del')
     dirs.push('dist')
     dirs.push('types')
   }
-  const deletedDirectoryPaths = await del(dirs)
+  const deletedDirectoryPaths = await deleteAsync(dirs)
   console.log('Deleted directories:\n', deletedDirectoryPaths.join('\n'))
 })()

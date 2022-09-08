@@ -2,6 +2,7 @@ import typescript from '@rollup/plugin-typescript'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import pkg from './package.json'
+import { visualizer } from 'rollup-plugin-visualizer'
 // import json from '@rollup/plugin-json'
 // import replace from '@rollup/plugin-replace'
 // import { terser } from 'rollup-plugin-terser'
@@ -17,9 +18,23 @@ const config = {
       file: pkg.main,
       format: 'cjs',
       sourcemap: isDev,
-      exports: 'auto'
+      exports: 'auto',
+      plugins: [
+        visualizer({
+          filename: 'stats/cjs.html'
+        })
+      ]
     },
-    { format: 'esm', file: pkg.module, sourcemap: isDev }
+    {
+      format: 'esm',
+      file: pkg.module,
+      sourcemap: isDev,
+      plugins: [
+        visualizer({
+          filename: 'stats/esm.html'
+        })
+      ]
+    }
     // {
     //   dir: 'dist',
     //   format: 'cjs',
