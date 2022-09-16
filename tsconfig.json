@@ -5,6 +5,7 @@
     "rootDirs": ["src", "test"],
     "declaration": false,
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
@@ -15,5 +16,5 @@
     ]
   },
   "exclude": ["dist", "node_modules", "test/types"],
-  "include": ["src/**/*", "types/**/*", "test/**/*"]
+  "include": ["src/**/*", "types/**/*", "test/**/*", "rollup.config.ts"]
 }

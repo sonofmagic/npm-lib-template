@@ -3,14 +3,16 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import pkg from './package.json'
 import { visualizer } from 'rollup-plugin-visualizer'
+import { RollupOptions } from 'rollup'
 // import json from '@rollup/plugin-json'
 // import replace from '@rollup/plugin-replace'
 // import { terser } from 'rollup-plugin-terser'
-// const isProd = process.env.NODE_ENV === 'production'
+const isProd = process.env.NODE_ENV === 'production'
 const isDev = process.env.NODE_ENV === 'development'
+// @ts-ignore
+const dependencies = pkg.dependencies as Record<string, string> | undefined
 
-/** @type {import('rollup').RollupOptions} */
-const config = {
+const config: RollupOptions = {
   input: 'src/index.ts',
   // { index: 'src/index.ts', cli: 'src/cli.ts' },
   output: [
@@ -20,9 +22,11 @@ const config = {
       sourcemap: isDev,
       exports: 'auto',
       plugins: [
-        visualizer({
-          filename: 'stats/cjs.html'
-        })
+        isProd
+          ? visualizer({
+            filename: 'stats/cjs.html'
+          })
+          : undefined
       ]
     },
     {
@@ -30,9 +34,11 @@ const config = {
       file: pkg.module,
       sourcemap: isDev,
       plugins: [
-        visualizer({
-          filename: 'stats/esm.html'
-        })
+        isProd
+          ? visualizer({
+            filename: 'stats/esm.html'
+          })
+          : undefined
       ]
     }
     // {
@@ -50,7 +56,7 @@ const config = {
     commonjs(),
     typescript({ tsconfig: './tsconfig.build.json', sourceMap: isDev })
   ],
-  external: [...(pkg.dependencies ? Object.keys(pkg.dependencies) : [])]
+  external: [...(dependencies ? Object.keys(dependencies) : [])]
 }
 
 export default config
