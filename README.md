@@ -1,4 +1,4 @@
-# npm-lib-template
+# npm-lib-rollup-template
 
 本人用于编写的一个 `npm` 包的一个模板
 
@@ -13,7 +13,7 @@
 
 执行 `npm run init:rename`
  
-作用为替换 `package.json` 中默认包含的所有名称为 `npm-lib-template` 的字段
+作用为替换 `package.json` 中默认包含的所有名称为 `npm-lib-rollup-template` 的字段
 
 默认替换为新建代码仓库的文件夹名称！
 

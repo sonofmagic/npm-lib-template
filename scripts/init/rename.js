@@ -8,30 +8,35 @@ const path = require('path')
  * @param {String} ref
  * @param {String} name
  */
-function doReplace (ref, name) {
+function doReplace(ref, name) {
   const paths = ref.split('.')
   const len = paths.length
   switch (len) {
     case 1: {
-      pkg[paths[0]] = pkg[paths[0]].replace(/npm-lib-template/g, name)
+      pkg[paths[0]] = pkg[paths[0]].replace(/npm-lib-rollup-template/g, name)
       break
     }
     case 2: {
-      pkg[paths[0]][paths[1]] = pkg[paths[0]][paths[1]].replace(/npm-lib-template/g, name)
+      pkg[paths[0]][paths[1]] = pkg[paths[0]][paths[1]].replace(
+        /npm-lib-rollup-template/g,
+        name
+      )
       break
     }
   }
 }
 
-function replacePkg (name) {
-  ['name', 'description', 'bugs.url', 'repository.url', 'homepage'].forEach(p => {
-    doReplace(p, name)
-    console.log(`[${p}] replace over`)
-  })
+function replacePkg(name) {
+  ;['name', 'description', 'bugs.url', 'repository.url', 'homepage'].forEach(
+    (p) => {
+      doReplace(p, name)
+      console.log(`[${p}] replace over`)
+    }
+  )
   return pkg
 }
 
-; (async () => {
+;(async () => {
   const cwd = process.cwd()
   const dirname = path.basename(cwd)
   const pkg = replacePkg(dirname)

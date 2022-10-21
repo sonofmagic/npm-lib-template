@@ -4,7 +4,7 @@ const pkgJson = require('../../package.json')
 const pkgName = pkgJson.name
 // const path = require('path')
 
-async function addBin (json, filename) {
+async function addBin(json, filename) {
   json.bin = {
     [pkgName]: filename
   }
@@ -16,7 +16,7 @@ async function addBin (json, filename) {
   return json
 }
 
-async function createBin (pkgName) {
+async function createBin(pkgName) {
   try {
     await fsp.access('bin')
   } catch (error) {
@@ -30,7 +30,7 @@ async function createBin (pkgName) {
   return filename
 }
 
-async function createCli () {
+async function createCli() {
   return fsp.writeFile('./src/cli.ts', '// get params from process.argv')
 }
 

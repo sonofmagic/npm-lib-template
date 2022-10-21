@@ -1,4 +1,5 @@
-import { deleteAsync } from 'del'
+const deleteAsync = require('del')
+
 // 同时兼容 `yarn clean` and `yarn clean xxx yyy zzz`
 ;(async () => {
   const dirs = process.argv.slice(2)
