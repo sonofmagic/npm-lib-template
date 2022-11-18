@@ -6,6 +6,8 @@
     "declaration": false,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
+    "moduleResolution": "Node",
+    "module": "ESNext",
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {

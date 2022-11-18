@@ -1,10 +1,13 @@
 import typescript from '@rollup/plugin-typescript'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
-import pkg from './package.json'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { RollupOptions } from 'rollup'
-// import json from '@rollup/plugin-json'
+import json from '@rollup/plugin-json'
+// import pkg from './package.json'
+import { createRequire } from 'node:module'
+const require = createRequire(import.meta.url)
+const pkg = require('./package.json')
 // import replace from '@rollup/plugin-replace'
 // import { terser } from 'rollup-plugin-terser'
 const isProd = process.env.NODE_ENV === 'production'
@@ -24,8 +27,8 @@ const config: RollupOptions = {
       plugins: [
         isProd
           ? visualizer({
-            filename: 'stats/cjs.html'
-          })
+              filename: 'stats/cjs.html'
+            })
           : undefined
       ]
     },
@@ -36,8 +39,8 @@ const config: RollupOptions = {
       plugins: [
         isProd
           ? visualizer({
-            filename: 'stats/esm.html'
-          })
+              filename: 'stats/esm.html'
+            })
           : undefined
       ]
     }
@@ -50,6 +53,7 @@ const config: RollupOptions = {
   ],
 
   plugins: [
+    json(),
     nodeResolve({
       preferBuiltins: true
     }),
