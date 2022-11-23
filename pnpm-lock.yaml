@@ -26,6 +26,7 @@ specifiers:
   rollup-plugin-visualizer: ^5.8.3
   ts-jest: ^29.0.3
   ts-node: ^10.9.1
+  tsconfig-paths: ^4.1.0
   tslib: ^2.4.1
   ttypescript: ^1.5.13
   typescript: ^4.9.3
@@ -57,6 +58,7 @@ devDependencies:
   rollup-plugin-visualizer: 5.8.3_rollup@3.3.0
   ts-jest: 29.0.3_4f6uxrzmuwipl5rr3bcogf6k74
   ts-node: 10.9.1_wup25etrarvlqkprac7h35hj7u
+  tsconfig-paths: 4.1.0
   tslib: 2.4.1
   ttypescript: 1.5.13_2dtigtkb225m7ii7q45utxqwgi
   typescript: 4.9.3
@@ -3926,6 +3928,15 @@ packages:
     dependencies:
       '@types/json5': 0.0.29
       json5: 1.0.1
+      minimist: 1.2.7
+      strip-bom: 3.0.0
+    dev: true
+
+  /tsconfig-paths/4.1.0:
+    resolution: {integrity: sha512-AHx4Euop/dXFC+Vx589alFba8QItjF+8hf8LtmuiCwHyI4rHXQtOOENaM8kvYf5fR0dRChy3wzWIZ9WbB7FWow==}
+    engines: {node: '>=6'}
+    dependencies:
+      json5: 2.2.1
       minimist: 1.2.7
       strip-bom: 3.0.0
     dev: true
