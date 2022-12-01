@@ -8,6 +8,7 @@ exports[`rollup build lib build output diff 1`] = `
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const hello = () => 'world';
+console.log('Load util');
 
 const foo = 'bar';
 const wait = (timeout) => {
@@ -47,6 +48,7 @@ exports[`rollup build lib build output diff 2`] = `
 [
   {
     "code": "const hello = () => 'world';
+console.log('Load util');
 
 const foo = 'bar';
 const wait = (timeout) => {
