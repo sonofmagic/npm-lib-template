@@ -8,5 +8,6 @@ const deleteAsync = require('del')
     dirs.push('types')
   }
   const deletedDirectoryPaths = await deleteAsync(dirs)
-  console.log('Deleted directories:\n', deletedDirectoryPaths.join('\n'))
+  console.log('Deleted directories:')
+  console.log(deletedDirectoryPaths.join('\n'))
 })()
