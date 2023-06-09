@@ -23,6 +23,9 @@
         "transform": "typescript-transform-paths",
         "afterDeclarations": true
       }
+    ],
+    "types": [
+      "vitest/globals"
     ]
   },
   "exclude": [

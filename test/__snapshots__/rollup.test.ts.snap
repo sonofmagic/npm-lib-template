@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`rollup build lib build output diff 1`] = `
+exports[`rollup build > lib build output diff 1`] = `
 [
   {
     "code": "'use strict';
@@ -44,7 +44,7 @@ exports.wait = wait;
 ]
 `;
 
-exports[`rollup build lib build output diff 2`] = `
+exports[`rollup build > lib build output diff 2`] = `
 [
   {
     "code": "const hello = () => 'world';
