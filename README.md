@@ -1,5 +1,7 @@
 # npm-lib-rollup-template
 
+[![codecov](https://codecov.io/gh/sonofmagic/npm-lib-rollup-template/branch/main/graph/badge.svg?token=zn05qXYznt)](https://codecov.io/gh/sonofmagic/npm-lib-rollup-template)
+
 本人用于编写的一个 `npm` 包的一个模板
 
 - 使用 `tsc` 或者 `rollup` 打包

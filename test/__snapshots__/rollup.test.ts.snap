@@ -67,7 +67,7 @@ export { foo, hello, wait };
       "hello",
       "wait",
     ],
-    "fileName": "index.es.js",
+    "fileName": "index.mjs",
     "implicitlyLoadedBefore": [],
     "importedBindings": {},
     "imports": [],
