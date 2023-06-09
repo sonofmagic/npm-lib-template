@@ -1,9 +1,9 @@
 {
   "name": "npm-lib-rollup-template",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "npm-lib-rollup-template",
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "module": "dist/index.mjs",
   "types": "types/index.d.ts",
   "scripts": {
     "dev": "pnpm clean && pnpm dts && cross-env NODE_ENV=development rollup --config rollup.config.ts --configPlugin typescript -w",
