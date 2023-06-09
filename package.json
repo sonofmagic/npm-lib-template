@@ -19,7 +19,7 @@
     "prepare": "ts-patch install -s",
     "preinstall": "npx only-allow pnpm"
   },
-  "packageManager": "pnpm@7.16.1",
+  "packageManager": "pnpm@7.33.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sonofmagic/npm-lib-rollup-template.git"
