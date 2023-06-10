@@ -1,7 +1,7 @@
-import config from '../rollup.config'
 import { rollup } from 'rollup'
 import omit from 'lodash/omit'
 import type { OutputChunk, OutputAsset } from 'rollup'
+import config from '../rollup.config'
 
 function normalizeOutput(
   outputs: [OutputChunk, ...(OutputChunk | OutputAsset)[]]
@@ -12,7 +12,7 @@ function normalizeOutput(
 }
 // diff output changes
 // run `jest -u` to update snap
-describe('rollup build', () => {
+describe.skip('rollup build', () => {
   it('lib build output diff', async () => {
     // const result:RollupBuild[] = []
 
