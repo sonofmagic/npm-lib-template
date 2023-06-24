@@ -19,7 +19,7 @@
     "ls:pack": "npm pack --dry-run",
     "prepare": "ts-patch install -s",
     "preinstall": "npx only-allow pnpm",
-    "release": "bumpp"
+    "release": "release-it"
   },
   "packageManager": "pnpm@8.6.2",
   "repository": {
@@ -68,6 +68,7 @@
     "lodash-es": "^4.17.21",
     "only-allow": "^1.1.1",
     "prettier": "^2.8.8",
+    "release-it": "^15.11.0",
     "rollup": "^3.25.1",
     "rollup-plugin-visualizer": "^5.9.2",
     "ts-node": "^10.9.1",
