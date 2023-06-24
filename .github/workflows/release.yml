@@ -19,9 +19,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-
       - name: Set node
         uses: actions/setup-node@v3
         with:
@@ -29,10 +26,8 @@ jobs:
           cache: pnpm
           registry-url: 'https://registry.npmjs.org'
 
-      # - run: npx changelogithub
-      #   continue-on-error: true
-      #   env:
-      #     GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
 
       - name: Install Dependencies
         run: pnpm i
@@ -40,8 +35,15 @@ jobs:
       - name: PNPM build
         run: pnpm run build
 
-      - name: Publish to NPM
-        run: pnpm publish --access public --no-git-checks
+      - name: Release
+        run: npx semantic-release
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          NPM_CONFIG_PROVENANCE: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        continue-on-error: true
+
+      # - name: Publish to NPM
+      #   run: pnpm publish --access public --no-git-checks
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      #     NPM_CONFIG_PROVENANCE: true
