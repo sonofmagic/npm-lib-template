@@ -41,6 +41,9 @@ devDependencies:
   '@types/node':
     specifier: ^20.3.1
     version: 20.3.1
+  '@types/semantic-release':
+    specifier: ^20.0.1
+    version: 20.0.1
   '@vitest/coverage-v8':
     specifier: ^0.32.2
     version: 0.32.2(vitest@0.32.2)
@@ -987,6 +990,12 @@ packages:
 
   /@types/resolve@1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
+    dev: true
+
+  /@types/semantic-release@20.0.1:
+    resolution: {integrity: sha512-rANSSye4mYTnP6szFSFUPl9GEowqxKjfKKnE06/axdgOLIL3pQNB4u3gXelZ2wiL6J6Clzb8PSyX8Bbv/JOPHw==}
+    dependencies:
+      '@types/node': 20.3.1
     dev: true
 
   /@types/semver@7.5.0:
