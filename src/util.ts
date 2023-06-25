@@ -1,3 +1,3 @@
 export const hello = () => 'world'
 
-console.log('Load util')
+console.log('Load util 0')
