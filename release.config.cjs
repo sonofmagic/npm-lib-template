@@ -1,5 +1,5 @@
 /** @type {import('semantic-release').Options} */
 const options = {
-  branches: ['master']
+  branches: ['master', 'main']
 }
 module.exports = options

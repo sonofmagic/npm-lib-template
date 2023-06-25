@@ -43,7 +43,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        continue-on-error: true
+        # continue-on-error: true
 
       # - name: Publish to NPM
       #   run: pnpm publish --access public --no-git-checks
