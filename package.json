@@ -1,6 +1,6 @@
 {
   "name": "npm-lib-rollup-template",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "npm-lib-rollup-template",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
