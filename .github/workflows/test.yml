@@ -1,10 +1,9 @@
 name: test
 
 on:
-  push:
-    branches:
-      - main
-
+  # push:
+  #   branches:
+  #     - main
   pull_request:
     branches:
       - main
@@ -31,4 +30,3 @@ jobs:
       - run: pnpm test
 
       - uses: codecov/codecov-action@v3
-
