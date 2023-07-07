@@ -67,7 +67,7 @@
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "only-allow": "^1.1.1",
-    "prettier": "^2.8.8",
+    "prettier": "^3.0.0",
     "rollup": "^3.26.2",
     "rollup-plugin-visualizer": "^5.9.2",
     "semantic-release": "^21.0.7",
