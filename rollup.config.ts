@@ -1,10 +1,10 @@
+import { readFileSync } from 'node:fs'
 import typescript from '@rollup/plugin-typescript'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { RollupOptions } from 'rollup'
 import json from '@rollup/plugin-json'
-import { readFileSync } from 'node:fs'
 const pkg = JSON.parse(
   readFileSync('./package.json', {
     encoding: 'utf8'

@@ -1,5 +1,5 @@
-import { defineConfig } from 'vitest/config'
 import path from 'node:path'
+import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   test: {
@@ -14,6 +14,7 @@ export default defineConfig({
       enabled: true,
       reportsDirectory: 'coverage/vitest'
     },
-    testTimeout: 60_000
-  },
+    testTimeout: 60_000,
+    setupFiles: ['./vitest.setup.ts']
+  }
 })
