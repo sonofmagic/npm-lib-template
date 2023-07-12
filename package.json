@@ -62,7 +62,7 @@
     "eslint": "8.44.0",
     "eslint-config-icebreaker": "^1.1.0",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-prettier": "^5.0.0",
     "klaw": "^4.1.0",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
