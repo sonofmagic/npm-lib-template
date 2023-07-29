@@ -1,7 +1,7 @@
-const fs = require('fs')
+const fs = require('node:fs')
 const fsp = fs.promises
+const path = require('node:path')
 const pkg = require('../../package.json')
-const path = require('path')
 
 /**
  * 临时解决方案
@@ -13,12 +13,12 @@ function doReplace(ref, name) {
   const len = paths.length
   switch (len) {
     case 1: {
-      pkg[paths[0]] = pkg[paths[0]].replace(/npm-lib-rollup-template/g, name)
+      pkg[paths[0]] = pkg[paths[0]].replaceAll('npm-lib-rollup-template', name)
       break
     }
     case 2: {
-      pkg[paths[0]][paths[1]] = pkg[paths[0]][paths[1]].replace(
-        /npm-lib-rollup-template/g,
+      pkg[paths[0]][paths[1]] = pkg[paths[0]][paths[1]].replaceAll(
+        'npm-lib-rollup-template',
         name
       )
       break
@@ -27,12 +27,17 @@ function doReplace(ref, name) {
 }
 
 function replacePkg(name) {
-  ;['name', 'description', 'bugs.url', 'repository.url', 'homepage'].forEach(
-    (p) => {
-      doReplace(p, name)
-      console.log(`[${p}] replace over`)
-    }
-  )
+  for (const p of [
+    'name',
+    'description',
+    'bugs.url',
+    'repository.url',
+    'homepage'
+  ]) {
+    doReplace(p, name)
+    console.log(`[${p}] replace over`)
+  }
+
   return pkg
 }
 

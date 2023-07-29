@@ -1,10 +1,10 @@
-const fs = require('fs')
+const fs = require('node:fs')
 const fsp = fs.promises
 const pkgJson = require('../../package.json')
 const pkgName = pkgJson.name
 // const path = require('path')
 
-async function addBin(json, filename) {
+function addBin(json, filename) {
   json.bin = {
     [pkgName]: filename
   }
@@ -19,7 +19,7 @@ async function addBin(json, filename) {
 async function createBin(pkgName) {
   try {
     await fsp.access('bin')
-  } catch (error) {
+  } catch {
     await fsp.mkdir('bin')
   }
   const filename = `bin/${pkgName}.js`
@@ -30,7 +30,7 @@ async function createBin(pkgName) {
   return filename
 }
 
-async function createCli() {
+function createCli() {
   return fsp.writeFile('./src/cli.ts', '// get params from process.argv')
 }
 

@@ -12,7 +12,7 @@ export default defineConfig({
     globals: true,
     coverage: {
       enabled: true,
-      reportsDirectory: 'coverage/vitest'
+      include: ['src/**']
     },
     testTimeout: 60_000,
     setupFiles: ['./vitest.setup.ts']
