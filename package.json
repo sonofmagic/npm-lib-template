@@ -59,7 +59,7 @@
     "cross-env": "^7.0.3",
     "defu": "^6.1.2",
     "del": "^7.0.0",
-    "eslint": "8.47.0",
+    "eslint": "8.48.0",
     "eslint-config-icebreaker": "^1.2.2",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
