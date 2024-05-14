@@ -1,12 +1,14 @@
 const fs = require('node:fs')
+const process = require('node:process')
+
 const fsp = fs.promises
 const path = require('node:path')
 const pkg = require('../../package.json')
 
 /**
  * 临时解决方案
- * @param {String} ref
- * @param {String} name
+ * @param {string} ref
+ * @param {string} name
  */
 function doReplace(ref, name) {
   const paths = ref.split('.')
@@ -19,7 +21,7 @@ function doReplace(ref, name) {
     case 2: {
       pkg[paths[0]][paths[1]] = pkg[paths[0]][paths[1]].replaceAll(
         'npm-lib-rollup-template',
-        name
+        name,
       )
       break
     }
@@ -32,7 +34,7 @@ function replacePkg(name) {
     'description',
     'bugs.url',
     'repository.url',
-    'homepage'
+    'homepage',
   ]) {
     doReplace(p, name)
     console.log(`[${p}] replace over`)

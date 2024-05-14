@@ -1,5 +1,9 @@
+const process = require('node:process')
+
 // 同时兼容 `yarn clean` and `yarn clean xxx yyy zzz`
-;(async () => {
+;
+
+(async () => {
   const { deleteAsync } = await import('del')
   const dirs = process.argv.slice(2)
   if (dirs.length === 0) {

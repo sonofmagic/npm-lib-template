@@ -1,6 +1,6 @@
 export const foo = 'bar'
 
-export const wait = (timeout?: number) => {
+export function wait(timeout?: number) {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(true)

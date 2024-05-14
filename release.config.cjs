@@ -7,7 +7,7 @@ const options = {
     'master',
     'next',
     { name: 'beta', prerelease: true },
-    { name: 'alpha', prerelease: true }
-  ]
+    { name: 'alpha', prerelease: true },
+  ],
 }
 module.exports = options

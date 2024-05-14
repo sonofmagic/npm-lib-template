@@ -1,16 +1,19 @@
 const fs = require('node:fs')
+
 const fsp = fs.promises
 const pkgJson = require('../../package.json')
+
 const pkgName = pkgJson.name
 // const path = require('path')
 
 function addBin(json, filename) {
   json.bin = {
-    [pkgName]: filename
+    [pkgName]: filename,
   }
   if (Array.isArray(json.files)) {
     json.files.push('bin')
-  } else {
+  }
+  else {
     json.files = ['dist', 'bin']
   }
   return json
@@ -19,13 +22,14 @@ function addBin(json, filename) {
 async function createBin(pkgName) {
   try {
     await fsp.access('bin')
-  } catch {
+  }
+  catch {
     await fsp.mkdir('bin')
   }
   const filename = `bin/${pkgName}.js`
   await fsp.writeFile(
     filename,
-    "#!/usr/bin/env node\nrequire('../dist/cli.js')\n"
+    '#!/usr/bin/env node\nrequire(\'../dist/cli.js\')\n',
   )
   return filename
 }

@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 import klaw from 'klaw'
+
 const distPath = path.resolve(__dirname, '../types')
 describe('dts', () => {
   it('dist dts no `from "@/xxx`', async () => {

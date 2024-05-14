@@ -6,15 +6,15 @@ export default defineConfig({
     alias: [
       {
         find: '@',
-        replacement: path.resolve(__dirname, './src')
-      }
+        replacement: path.resolve(__dirname, './src'),
+      },
     ],
     globals: true,
     coverage: {
       enabled: true,
-      include: ['src/**']
+      include: ['src/**'],
     },
     testTimeout: 60_000,
-    setupFiles: ['./vitest.setup.ts']
-  }
+    setupFiles: ['./vitest.setup.ts'],
+  },
 })
