@@ -4,9 +4,9 @@
 
 本人用于编写的一个 `npm` 包的一个模板
 
-- 使用 `rollup` 打包 (兼容 `tsc`)
+- 使用 ~~`rollup`~~ `tsup`(esbuild) 打包 , `rollup` 打包版本在 [rollup](https://github.com/sonofmagic/npm-lib-rollup-template/tree/rollup) 分支 (兼容 `tsc`)
 - 使用 ~~`jest`~~ `vitest` 作为单元测试框架
-- 使用 `eslint` 来规范代码风格，默认风格为 `standard`
+- 使用 `eslint` 来规范代码风格
 - 输出 `dist` -> `cjs`,`esm` and `.d.ts`
 - 使用 `semantic-release` 来发布 `npm`/`github`
 
@@ -28,4 +28,4 @@
 
 执行 `npm run init:bin`
 
-作用为 `package.json`  添加 `files` 和 `bin`，同时生成 `bin/{{pkg.name}}.js` 和 `src/cli.ts` 文件
+作用为 `package.json` 添加 `files` 和 `bin`，同时生成 `bin/{{pkg.name}}.js` 和 `src/cli.ts` 文件

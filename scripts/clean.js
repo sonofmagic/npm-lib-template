@@ -1,4 +1,4 @@
-const process = require('node:process')
+import process from 'node:process'
 
 // 同时兼容 `yarn clean` and `yarn clean xxx yyy zzz`
 ;

@@ -1,9 +1,7 @@
-const fs = require('node:fs')
-const process = require('node:process')
-
-const fsp = fs.promises
-const path = require('node:path')
-const pkg = require('../../package.json')
+import process from 'node:process'
+import fsp from 'node:fs/promises'
+import path from 'node:path'
+import pkg from '../../package.json' with {type: 'json'}
 
 /**
  * 临时解决方案
@@ -43,7 +41,7 @@ function replacePkg(name) {
   return pkg
 }
 
-;(async () => {
+; (async () => {
   const cwd = process.cwd()
   const dirname = path.basename(cwd)
   const pkg = replacePkg(dirname)

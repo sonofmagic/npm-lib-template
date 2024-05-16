@@ -1,10 +1,7 @@
-const fs = require('node:fs')
-
-const fsp = fs.promises
-const pkgJson = require('../../package.json')
+import fsp from 'node:fs/promises'
+import pkgJson from '../../package.json' with {type: 'json'}
 
 const pkgName = pkgJson.name
-// const path = require('path')
 
 function addBin(json, filename) {
   json.bin = {
@@ -29,7 +26,7 @@ async function createBin(pkgName) {
   const filename = `bin/${pkgName}.js`
   await fsp.writeFile(
     filename,
-    '#!/usr/bin/env node\nrequire(\'../dist/cli.js\')\n',
+    '#!/usr/bin/env node\nimport \'../dist/cli.js\'\n',
   )
   return filename
 }
@@ -38,7 +35,7 @@ function createCli() {
   return fsp.writeFile('./src/cli.ts', '// get params from process.argv')
 }
 
-;(async () => {
+; (async () => {
   const filename = await createBin(pkgName)
   await createCli()
   const pkg = await addBin(pkgJson, filename)
