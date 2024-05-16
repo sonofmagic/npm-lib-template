@@ -1,14 +1,16 @@
 import { readFileSync } from 'node:fs'
+import process from 'node:process'
 import typescript from '@rollup/plugin-typescript'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import { visualizer } from 'rollup-plugin-visualizer'
-import { RollupOptions } from 'rollup'
+import type { RollupOptions } from 'rollup'
 import json from '@rollup/plugin-json'
+
 const pkg = JSON.parse(
   readFileSync('./package.json', {
-    encoding: 'utf8'
-  })
+    encoding: 'utf8',
+  }),
 )
 // import replace from '@rollup/plugin-replace'
 // import terser from '@rollup/plugin-terser'
@@ -29,16 +31,16 @@ const config: RollupOptions = {
       plugins: [
         isProd
           ? visualizer({
-              filename: 'stats/cjs.html'
-            })
-          : undefined
+            filename: 'stats/cjs.html',
+          })
+          : undefined,
       ],
       esModule: true,
       generatedCode: {
-        reservedNamesAsProps: false
+        reservedNamesAsProps: false,
       },
       interop: 'compat',
-      systemNullSetters: false
+      systemNullSetters: false,
     },
     {
       format: 'esm',
@@ -47,17 +49,17 @@ const config: RollupOptions = {
       plugins: [
         isProd
           ? visualizer({
-              filename: 'stats/esm.html'
-            })
-          : undefined
+            filename: 'stats/esm.html',
+          })
+          : undefined,
       ],
       esModule: true,
       generatedCode: {
-        reservedNamesAsProps: false
+        reservedNamesAsProps: false,
       },
       interop: 'compat',
-      systemNullSetters: false
-    }
+      systemNullSetters: false,
+    },
     // {
     //   dir: 'dist',
     //   format: 'cjs',
@@ -70,12 +72,12 @@ const config: RollupOptions = {
   plugins: [
     json(),
     nodeResolve({
-      preferBuiltins: true
+      preferBuiltins: true,
     }),
     commonjs(),
-    typescript({ tsconfig: './tsconfig.build.json', sourceMap: isDev })
+    typescript({ tsconfig: './tsconfig.build.json', sourceMap: isDev }),
   ],
-  external: [...(dependencies ? Object.keys(dependencies) : [])]
+  external: [...(dependencies ? Object.keys(dependencies) : [])],
 }
 
 export default config
