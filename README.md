@@ -1,6 +1,6 @@
 # npm-lib-rollup-template
 
-> next branch
+> BREAKING CHANGE
 
 [![codecov](https://codecov.io/gh/sonofmagic/npm-lib-rollup-template/branch/main/graph/badge.svg?token=zn05qXYznt)](https://codecov.io/gh/sonofmagic/npm-lib-rollup-template)
 
