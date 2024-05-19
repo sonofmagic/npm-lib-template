@@ -13,12 +13,12 @@ function doReplace(ref, name) {
   const len = paths.length
   switch (len) {
     case 1: {
-      pkg[paths[0]] = pkg[paths[0]].replaceAll('npm-lib-rollup-template', name)
+      pkg[paths[0]] = pkg[paths[0]].replaceAll('npm-lib-template', name)
       break
     }
     case 2: {
       pkg[paths[0]][paths[1]] = pkg[paths[0]][paths[1]].replaceAll(
-        'npm-lib-rollup-template',
+        'npm-lib-template',
         name,
       )
       break

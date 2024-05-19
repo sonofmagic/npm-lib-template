@@ -26,7 +26,7 @@ jobs:
           fetch-depth: 0
       # run before Set node , otherwise show Unable to locate executable file: pnpm error
       - name: Install pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
 
       - name: Set node
         uses: actions/setup-node@v4
@@ -42,7 +42,7 @@ jobs:
         run: pnpm run build
       - name: Test
         run: pnpm run test
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
       - name: Release
         run: npx semantic-release
         env:

@@ -8,4 +8,6 @@ export function wait(timeout?: number) {
   })
 }
 
+export const dirname = __dirname
+
 export * from '@/util'
