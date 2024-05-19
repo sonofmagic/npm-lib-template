@@ -1,6 +1,6 @@
 # npm-lib-rollup-template
 
-> next branch
+> beta branch
 
 [![codecov](https://codecov.io/gh/sonofmagic/npm-lib-rollup-template/branch/main/graph/badge.svg?token=zn05qXYznt)](https://codecov.io/gh/sonofmagic/npm-lib-rollup-template)
 
