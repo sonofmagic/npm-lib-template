@@ -55,7 +55,7 @@
   },
   "homepage": "https://github.com/sonofmagic/npm-lib-rollup-template#readme",
   "devDependencies": {
-    "@icebreakers/eslint-config": "^0.2.0",
+    "@icebreakers/eslint-config": "^0.3.1",
     "@tsconfig/recommended": "^1.0.6",
     "@types/klaw": "^3.0.6",
     "@types/lodash": "^4.17.4",
