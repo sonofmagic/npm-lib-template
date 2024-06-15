@@ -6,13 +6,13 @@
   "description": "npm-lib-template",
   "author": "SonOfMagic <qq1324318532@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/sonofmagic/npm-lib-rollup-template#readme",
+  "homepage": "https://github.com/sonofmagic/npm-lib-template#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sonofmagic/npm-lib-rollup-template.git"
+    "url": "https://github.com/sonofmagic/npm-lib-template.git"
   },
   "bugs": {
-    "url": "https://github.com/sonofmagic/npm-lib-rollup-template/issues"
+    "url": "https://github.com/sonofmagic/npm-lib-template/issues"
   },
   "keywords": [],
   "exports": {
