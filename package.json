@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@9.3.0",
-  "description": "npm-lib-template",
+  "description": "icebreaker's npm-lib-template",
   "author": "SonOfMagic <qq1324318532@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/sonofmagic/npm-lib-template#readme",
@@ -14,7 +14,12 @@
   "bugs": {
     "url": "https://github.com/sonofmagic/npm-lib-template/issues"
   },
-  "keywords": [],
+  "keywords": [
+    "npm",
+    "lib",
+    "ts",
+    "template"
+  ],
   "exports": {
     "./package.json": "./package.json",
     ".": {
