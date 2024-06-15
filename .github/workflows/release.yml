@@ -42,7 +42,7 @@ jobs:
         run: pnpm run build
       - name: Test
         run: pnpm run test
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
       - name: Release
         run: npx semantic-release
         env:
