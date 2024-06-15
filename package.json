@@ -1,9 +1,9 @@
 {
-  "name": "npm-lib-rollup-template",
+  "name": "npm-lib-template",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@9.3.0",
-  "description": "npm-lib-rollup-template",
+  "description": "npm-lib-template",
   "author": "SonOfMagic <qq1324318532@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/sonofmagic/npm-lib-rollup-template#readme",
