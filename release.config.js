@@ -9,4 +9,4 @@ const options = {
     { name: 'alpha', prerelease: true },
   ],
 }
-module.exports = options
+export default options

@@ -35,10 +35,8 @@ function createCli() {
   return fsp.writeFile('./src/cli.ts', '// get params from process.argv')
 }
 
-; (async () => {
-  const filename = await createBin(pkgName)
-  await createCli()
-  const pkg = await addBin(pkgJson, filename)
-  await fsp.writeFile('./package.json', JSON.stringify(pkg, null, 2))
-  console.log('bin create successfully!')
-})()
+const filename = await createBin(pkgName)
+await createCli()
+const pkg = await addBin(pkgJson, filename)
+await fsp.writeFile('./package.json', JSON.stringify(pkg, null, 2))
+console.log('bin create successfully!')
