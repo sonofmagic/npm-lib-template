@@ -13,7 +13,7 @@ importers:
         version: 0.3.9(@vue/compiler-sfc@3.4.29)(eslint@9.5.0)(tailwindcss@3.4.4(ts-node@10.9.2(@types/node@20.14.9)(typescript@5.5.2)))(typescript@5.5.2)(vitest@1.6.0(@types/node@20.14.9)(terser@5.31.1))
       '@tsconfig/recommended':
         specifier: ^1.0.6
-        version: 1.0.6
+        version: 1.0.7
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
@@ -64,7 +64,7 @@ importers:
         version: 24.0.0(typescript@5.5.2)
       tsup:
         specifier: ^8.1.0
-        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.2(@types/node@20.14.9)(typescript@5.5.2))(typescript@5.5.2)
+        version: 8.1.0(postcss@8.4.39)(ts-node@10.9.2(@types/node@20.14.9)(typescript@5.5.2))(typescript@5.5.2)
       tsx:
         specifier: ^4.15.7
         version: 4.15.8
@@ -1059,8 +1059,8 @@ packages:
   '@tsconfig/node16@1.0.4':
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
 
-  '@tsconfig/recommended@1.0.6':
-    resolution: {integrity: sha512-0IKu9GHYF1NGTJiYgfWwqnOQSlnE9V9R7YohHNNf0/fj/SyOZWzdd06JFr0fLpg1Mqw0kGbYg8w5xdkSqLKM9g==}
+  '@tsconfig/recommended@1.0.7':
+    resolution: {integrity: sha512-xiNMgCuoy4mCL4JTywk9XFs5xpRUcKxtWEcMR6FNMtsgewYTIgIR+nvlP4A4iRCAzRsHMnPhvTRrzp4AGcRTEA==}
 
   '@types/acorn@4.0.6':
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
@@ -3361,6 +3361,10 @@ packages:
     resolution: {integrity: sha512-Wglpdk03BSfXkHoQa3b/oulrotAkwrlLDRSOb9D0bN86FdRyE9lppSp33aHNPgBa0JKCoB+drFLZkQoRRYae5A==}
     engines: {node: ^10 || ^12 || >=14}
 
+  postcss@8.4.39:
+    resolution: {integrity: sha512-0vzE+lAiG7hZl1/9I8yzKLx3aR9Xbof3fBHKunvMfOCYAtMhrsnccJY2iTURb9EZd5+pLuiNV9/c/GZJOHsgIw==}
+    engines: {node: ^10 || ^12 || >=14}
+
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
@@ -5050,7 +5054,7 @@ snapshots:
   '@tsconfig/node16@1.0.4':
     optional: true
 
-  '@tsconfig/recommended@1.0.6': {}
+  '@tsconfig/recommended@1.0.7': {}
 
   '@types/acorn@4.0.6':
     dependencies:
@@ -5277,7 +5281,7 @@ snapshots:
       '@vue/shared': 3.4.29
       estree-walker: 2.0.2
       magic-string: 0.30.10
-      postcss: 8.4.38
+      postcss: 8.4.39
       source-map-js: 1.2.0
 
   '@vue/compiler-ssr@3.4.29':
@@ -7674,29 +7678,29 @@ snapshots:
 
   possible-typed-array-names@1.0.0: {}
 
-  postcss-import@15.1.0(postcss@8.4.38):
+  postcss-import@15.1.0(postcss@8.4.39):
     dependencies:
-      postcss: 8.4.38
+      postcss: 8.4.39
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
       resolve: 1.22.8
 
-  postcss-js@4.0.1(postcss@8.4.38):
+  postcss-js@4.0.1(postcss@8.4.39):
     dependencies:
       camelcase-css: 2.0.1
-      postcss: 8.4.38
+      postcss: 8.4.39
 
-  postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.2(@types/node@20.14.9)(typescript@5.5.2)):
+  postcss-load-config@4.0.2(postcss@8.4.39)(ts-node@10.9.2(@types/node@20.14.9)(typescript@5.5.2)):
     dependencies:
       lilconfig: 3.1.1
       yaml: 2.4.3
     optionalDependencies:
-      postcss: 8.4.38
+      postcss: 8.4.39
       ts-node: 10.9.2(@types/node@20.14.9)(typescript@5.5.2)
 
-  postcss-nested@6.0.1(postcss@8.4.38):
+  postcss-nested@6.0.1(postcss@8.4.39):
     dependencies:
-      postcss: 8.4.38
+      postcss: 8.4.39
       postcss-selector-parser: 6.1.0
 
   postcss-selector-parser@6.1.0:
@@ -7707,6 +7711,12 @@ snapshots:
   postcss-value-parser@4.2.0: {}
 
   postcss@8.4.38:
+    dependencies:
+      nanoid: 3.3.7
+      picocolors: 1.0.1
+      source-map-js: 1.2.0
+
+  postcss@8.4.39:
     dependencies:
       nanoid: 3.3.7
       picocolors: 1.0.1
@@ -8239,11 +8249,11 @@ snapshots:
       normalize-path: 3.0.0
       object-hash: 3.0.0
       picocolors: 1.0.1
-      postcss: 8.4.38
-      postcss-import: 15.1.0(postcss@8.4.38)
-      postcss-js: 4.0.1(postcss@8.4.38)
-      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.2(@types/node@20.14.9)(typescript@5.5.2))
-      postcss-nested: 6.0.1(postcss@8.4.38)
+      postcss: 8.4.39
+      postcss-import: 15.1.0(postcss@8.4.39)
+      postcss-js: 4.0.1(postcss@8.4.39)
+      postcss-load-config: 4.0.2(postcss@8.4.39)(ts-node@10.9.2(@types/node@20.14.9)(typescript@5.5.2))
+      postcss-nested: 6.0.1(postcss@8.4.39)
       postcss-selector-parser: 6.1.0
       resolve: 1.22.8
       sucrase: 3.35.0
@@ -8351,7 +8361,7 @@ snapshots:
 
   tslib@2.6.3: {}
 
-  tsup@8.1.0(postcss@8.4.38)(ts-node@10.9.2(@types/node@20.14.9)(typescript@5.5.2))(typescript@5.5.2):
+  tsup@8.1.0(postcss@8.4.39)(ts-node@10.9.2(@types/node@20.14.9)(typescript@5.5.2))(typescript@5.5.2):
     dependencies:
       bundle-require: 4.2.1(esbuild@0.21.4)
       cac: 6.7.14
@@ -8361,14 +8371,14 @@ snapshots:
       execa: 5.1.1
       globby: 11.1.0
       joycon: 3.1.1
-      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.2(@types/node@20.14.9)(typescript@5.5.2))
+      postcss-load-config: 4.0.2(postcss@8.4.39)(ts-node@10.9.2(@types/node@20.14.9)(typescript@5.5.2))
       resolve-from: 5.0.0
       rollup: 4.18.0
       source-map: 0.8.0-beta.0
       sucrase: 3.35.0
       tree-kill: 1.2.2
     optionalDependencies:
-      postcss: 8.4.38
+      postcss: 8.4.39
       typescript: 5.5.2
     transitivePeerDependencies:
       - supports-color
