@@ -37,7 +37,7 @@
     "src/**/*",
     "types/**/*",
     "test/**/*",
-    "rollup.config.ts"
+    "rollup.config.js"
   ],
   "ts-node": {
     "compilerOptions": {
