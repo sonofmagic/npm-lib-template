@@ -1,3 +1,6 @@
+import fs from 'fs'
+import commonjs from '@rollup/plugin-commonjs';
+
 /**
  * @type {import('rollup').RollupOptions}
  */
@@ -8,13 +11,16 @@ export default {
     format: 'cjs'
   },
   plugins: [
+    commonjs({
+      transformMixedEsModules: true
+    }),
     {
       name: 'x',
       load: {
         handler(id) {
           if (id.endsWith('.wxss')) {
             return {
-              code: 'export default \'x\''
+              code: `export default ${JSON.stringify(fs.readFileSync(id, 'utf8'))}`
             }
           }
         }

@@ -1,5 +1,5 @@
 import x from './wxss/index.wxss'
 
-require('./index/css')
+const y = require('./index.wxss')
 
-console.console.log((x));
+console.log(x, y);
