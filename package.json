@@ -53,34 +53,39 @@
     "init:bin": "tsx scripts/init/bin.ts",
     "clean": "tsx scripts/clean.ts",
     "ls:pack": "npm pack --dry-run",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "prepare": "husky"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
-    "@icebreakers/eslint-config": "^0.3.9",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/types": "^19.0.3",
+    "@icebreakers/eslint-config": "^0.3.17",
     "@tsconfig/recommended": "^1.0.6",
     "@types/fs-extra": "^11.0.4",
     "@types/klaw": "^3.0.6",
     "@types/lodash": "^4.17.5",
     "@types/lodash-es": "^4.17.12",
-    "@types/node": "^20.14.8",
-    "@vitest/coverage-v8": "^2.0.0",
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^2.0.5",
     "cross-env": "^7.0.3",
     "defu": "^6.1.4",
     "del": "^7.1.0",
     "eslint": "9.8.0",
     "fs-extra": "^11.2.0",
+    "husky": "^9.1.4",
     "klaw": "^4.1.0",
+    "lint-staged": "^15.2.7",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "pathe": "^1.1.2",
     "semantic-release": "^24.0.0",
     "tsup": "^8.1.0",
-    "tsx": "^4.15.7",
+    "tsx": "^4.16.3",
     "typescript": "^5.5.2",
-    "vitest": "^2.0.0"
+    "vitest": "^2.0.5"
   }
 }
