@@ -63,7 +63,7 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^19.2.2",
     "@commitlint/types": "^19.0.3",
-    "@icebreakers/eslint-config": "^0.3.17",
+    "@icebreakers/eslint-config": "^0.3.19",
     "@tsconfig/recommended": "^1.0.6",
     "@types/fs-extra": "^11.0.4",
     "@types/klaw": "^3.0.6",
@@ -78,13 +78,13 @@
     "fs-extra": "^11.2.0",
     "husky": "^9.1.4",
     "klaw": "^4.1.0",
-    "lint-staged": "^15.2.7",
+    "lint-staged": "^15.2.8",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "pathe": "^1.1.2",
     "semantic-release": "^24.0.0",
-    "tsup": "^8.1.0",
-    "tsx": "^4.16.3",
+    "tsup": "^8.2.4",
+    "tsx": "^4.17.0",
     "typescript": "^5.5.2",
     "vitest": "^2.0.5"
   }
