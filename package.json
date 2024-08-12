@@ -54,7 +54,8 @@
     "clean": "tsx scripts/clean.ts",
     "ls:pack": "npm pack --dry-run",
     "semantic-release": "semantic-release",
-    "prepare": "husky"
+    "prepare": "husky",
+    "start": "tsx src/index.ts"
   },
   "publishConfig": {
     "access": "public",
@@ -82,6 +83,7 @@
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "pathe": "^1.1.2",
+    "rollup": "^4.20.0",
     "semantic-release": "^24.0.0",
     "tsup": "^8.2.4",
     "tsx": "^4.17.0",
