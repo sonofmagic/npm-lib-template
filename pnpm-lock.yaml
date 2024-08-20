@@ -55,7 +55,7 @@ importers:
         version: 11.2.0
       husky:
         specifier: ^9.1.4
-        version: 9.1.4
+        version: 9.1.5
       klaw:
         specifier: ^4.1.0
         version: 4.1.0
@@ -2321,8 +2321,8 @@ packages:
     resolution: {integrity: sha512-74kytxOUSvNbjrT9KisAbaTZ/eJwD/LrbM/kh5j0IhPuJzwuA19dWvniFGwBzN9rVjg+O/e+F310PjObDXS+9Q==}
     engines: {node: '>=18.18.0'}
 
-  husky@9.1.4:
-    resolution: {integrity: sha512-bho94YyReb4JV7LYWRWxZ/xr6TtOTt8cMfmQ39MQYJ7f/YE268s3GdghGwi+y4zAeqewE5zYLvuhV0M0ijsDEA==}
+  husky@9.1.5:
+    resolution: {integrity: sha512-rowAVRUBfI0b4+niA4SJMhfQwc107VLkBUgEYYAOQAbqDCnra1nYh83hF/MDmhYs9t9n1E3DuKOrs2LYNC+0Ag==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -6940,7 +6940,7 @@ snapshots:
 
   human-signals@7.0.0: {}
 
-  husky@9.1.4: {}
+  husky@9.1.5: {}
 
   ignore@5.2.4: {}
 
