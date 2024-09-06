@@ -1,6 +1,6 @@
-import process from 'node:process'
 import fsp from 'node:fs/promises'
 import path from 'node:path'
+import process from 'node:process'
 import pkg from '../../package.json' with {type: 'json'}
 
 /**
