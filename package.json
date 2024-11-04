@@ -65,7 +65,7 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^19.5.0",
     "@commitlint/types": "^19.5.0",
-    "@icebreakers/eslint-config": "^0.6.1",
+    "@icebreakers/eslint-config": "^0.7.0",
     "@tsconfig/recommended": "^1.0.6",
     "@types/fs-extra": "^11.0.4",
     "@types/klaw": "^3.0.6",
