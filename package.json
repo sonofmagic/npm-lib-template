@@ -83,7 +83,7 @@
     "lint-staged": "^15.2.9",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
-    "pathe": "^1.1.2",
+    "pathe": "^2.0.0",
     "semantic-release": "^24.2.0",
     "tsup": "^8.3.5",
     "tsx": "^4.19.2",
