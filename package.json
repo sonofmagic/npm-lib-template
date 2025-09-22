@@ -2,7 +2,7 @@
   "name": "npm-lib-template",
   "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@10.17.0",
+  "packageManager": "pnpm@10.17.1",
   "description": "icebreaker's npm-lib-template",
   "author": "SonOfMagic <qq1324318532@gmail.com>",
   "license": "MIT",
