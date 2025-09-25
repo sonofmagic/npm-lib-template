@@ -64,9 +64,9 @@
     "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
-    "@commitlint/types": "^19.8.1",
+    "@commitlint/cli": "^20.0.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/types": "^20.0.0",
     "@icebreakers/eslint-config": "^1.4.4",
     "@tsconfig/recommended": "^1.0.10",
     "@types/fs-extra": "^11.0.4",
