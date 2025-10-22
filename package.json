@@ -79,7 +79,7 @@
     "eslint": "9.38.0",
     "fs-extra": "^11.3.2",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.5",
+    "lint-staged": "^16.2.6",
     "pathe": "^2.0.3",
     "semantic-release": "^25.0.1",
     "tsup": "^8.5.0",
