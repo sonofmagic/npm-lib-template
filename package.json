@@ -67,7 +67,7 @@
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@commitlint/types": "^20.0.0",
-    "@icebreakers/eslint-config": "^1.5.5",
+    "@icebreakers/eslint-config": "^1.5.6",
     "@tsconfig/recommended": "^1.0.10",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^24.9.1",
