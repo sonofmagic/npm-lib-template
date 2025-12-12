@@ -1,50 +1,72 @@
-import fsp from 'node:fs/promises'
+import type { PackageJson } from '../types.ts'
+import { writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
-import pkg from '../../package.json' with { type: 'json' }
+import pkgJson from '../../package.json' with { type: 'json' }
+
+type ReplaceableKey
+  = | 'name'
+    | 'description'
+    | 'bugs.url'
+    | 'repository.url'
+    | 'homepage'
+
+const TEMPLATE_NAME = 'npm-lib-template'
 
 /**
  * 临时解决方案
- * @param {string} ref
- * @param {string} name
+ * @param ref
+ * @param name
  */
-function doReplace(ref, name) {
-  const paths = ref.split('.')
-  const len = paths.length
-  switch (len) {
-    case 1: {
-      pkg[paths[0]] = pkg[paths[0]].replaceAll('npm-lib-template', name)
+function doReplace(pkg: PackageJson, ref: ReplaceableKey, name: string) {
+  switch (ref) {
+    case 'name':
+    case 'description':
+    case 'homepage': {
+      const current = pkg[ref]
+      if (typeof current === 'string') {
+        pkg[ref] = current.replaceAll(TEMPLATE_NAME, name)
+      }
       break
     }
-    case 2: {
-      pkg[paths[0]][paths[1]] = pkg[paths[0]][paths[1]].replaceAll(
-        'npm-lib-template',
-        name,
-      )
+    case 'bugs.url': {
+      const current = pkg.bugs?.url
+      if (typeof current === 'string') {
+        pkg.bugs = { ...(pkg.bugs ?? {}), url: current.replaceAll(TEMPLATE_NAME, name) }
+      }
+      break
+    }
+    case 'repository.url': {
+      const current = pkg.repository?.url
+      if (typeof current === 'string') {
+        pkg.repository = { ...(pkg.repository ?? {}), url: current.replaceAll(TEMPLATE_NAME, name) }
+      }
       break
     }
   }
 }
 
-function replacePkg(name) {
-  for (const p of [
+function replacePkg(name: string) {
+  const pkg: PackageJson = { ...pkgJson }
+
+  for (const ref of [
     'name',
     'description',
     'bugs.url',
     'repository.url',
     'homepage',
-  ]) {
-    doReplace(p, name)
-    console.log(`[${p}] replace over`)
+  ] satisfies ReplaceableKey[]) {
+    doReplace(pkg, ref, name)
+    console.log(`[${ref}] replace over`)
   }
 
   return pkg
 }
 
-; (async () => {
+;(async () => {
   const cwd = process.cwd()
   const dirname = path.basename(cwd)
   const pkg = replacePkg(dirname)
-  await fsp.writeFile('./package.json', JSON.stringify(pkg, null, 2))
+  await writeFile('./package.json', JSON.stringify(pkg, null, 2))
   console.log('rename successfully!')
 })()

@@ -1,30 +1,34 @@
-import fsp from 'node:fs/promises'
+import type { PackageJson } from '../types.ts'
+import { access, mkdir, writeFile } from 'node:fs/promises'
 import pkgJson from '../../package.json' with { type: 'json' }
 
 const pkgName = pkgJson.name
 
-function addBin(json, filename) {
-  json.bin = {
-    [pkgName]: filename,
+function addBin(json: PackageJson, filename: string): PackageJson {
+  const next: PackageJson = {
+    ...json,
+    bin: {
+      ...(json.bin ?? {}),
+      [pkgName]: filename,
+    },
   }
-  if (Array.isArray(json.files)) {
-    json.files.push('bin')
-  }
-  else {
-    json.files = ['dist', 'bin']
-  }
-  return json
+  next.files = Array.isArray(json.files) ? [...json.files, 'bin'] : ['dist', 'bin']
+  return next
 }
 
-async function createBin(pkgName) {
+async function ensureBinDirectory() {
   try {
-    await fsp.access('bin')
+    await access('bin')
   }
   catch {
-    await fsp.mkdir('bin')
+    await mkdir('bin')
   }
-  const filename = `bin/${pkgName}.js`
-  await fsp.writeFile(
+}
+
+async function createBin(name: string) {
+  await ensureBinDirectory()
+  const filename = `bin/${name}.js`
+  await writeFile(
     filename,
     '#!/usr/bin/env node\nimport \'../dist/cli.js\'\n',
   )
@@ -32,11 +36,11 @@ async function createBin(pkgName) {
 }
 
 function createCli() {
-  return fsp.writeFile('./src/cli.ts', '// get params from process.argv')
+  return writeFile('./src/cli.ts', '// get params from process.argv')
 }
 
 const filename = await createBin(pkgName)
 await createCli()
-const pkg = await addBin(pkgJson, filename)
-await fsp.writeFile('./package.json', JSON.stringify(pkg, null, 2))
+const pkg = addBin({ ...pkgJson } as PackageJson, filename)
+await writeFile('./package.json', JSON.stringify(pkg, null, 2))
 console.log('bin create successfully!')
