@@ -1,5 +1,5 @@
 import fsp from 'node:fs/promises'
-import pkgJson from '../../package.json' with {type: 'json'}
+import pkgJson from '../../package.json' with { type: 'json' }
 
 const pkgName = pkgJson.name
 
