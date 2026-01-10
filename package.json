@@ -70,7 +70,7 @@
     "@icebreakers/eslint-config": "^1.6.11",
     "@tsconfig/recommended": "^1.0.13",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^24.10.6",
+    "@types/node": "^24.10.7",
     "@vitest/coverage-v8": "^4.0.16",
     "cross-env": "^10.1.0",
     "defu": "^6.1.4",
