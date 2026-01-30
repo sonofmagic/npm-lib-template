@@ -81,7 +81,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "pathe": "^2.0.3",
-    "semantic-release": "^25.0.2",
+    "semantic-release": "^25.0.3",
     "tsup": "^8.5.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
