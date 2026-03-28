@@ -18,8 +18,8 @@ importers:
         specifier: ^20.5.0
         version: 20.5.0
       '@icebreakers/eslint-config':
-        specifier: ^2.0.3
-        version: 2.0.3(@typescript-eslint/rule-tester@8.56.1(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.57.0(typescript@5.9.3))(@typescript-eslint/utils@8.57.0(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.6)(eslint-plugin-pnpm@1.6.0(eslint@10.1.0(jiti@2.6.1)))(eslint@10.1.0(jiti@2.6.1))(globals@17.4.0)(postcss@8.5.8)(stylelint-order@8.1.1(stylelint@17.5.0(typescript@5.9.3)))(stylelint@17.5.0(typescript@5.9.3))(tailwindcss@3.4.11(ts-node@10.9.2(@types/node@24.12.0)(typescript@5.9.3)))(typescript@5.9.3)(vitest@4.1.2(@types/node@24.12.0)(vite@7.2.7(@types/node@24.12.0)(jiti@2.6.1)(terser@5.33.0)(tsx@4.21.0)(yaml@2.8.2)))
+        specifier: ^2.1.0
+        version: 2.1.0(@typescript-eslint/rule-tester@8.56.1(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.57.0(typescript@5.9.3))(@typescript-eslint/utils@8.57.0(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.6)(eslint-plugin-pnpm@1.6.0(eslint@10.1.0(jiti@2.6.1)))(eslint@10.1.0(jiti@2.6.1))(globals@17.4.0)(postcss@8.5.8)(stylelint-order@8.1.1(stylelint@17.5.0(typescript@5.9.3)))(stylelint@17.5.0(typescript@5.9.3))(tailwindcss@3.4.11(ts-node@10.9.2(@types/node@24.12.0)(typescript@5.9.3)))(typescript@5.9.3)(vitest@4.1.2(@types/node@24.12.0)(vite@7.2.7(@types/node@24.12.0)(jiti@2.6.1)(terser@5.33.0)(tsx@4.21.0)(yaml@2.8.2)))
       '@tsconfig/recommended':
         specifier: ^1.0.13
         version: 1.0.13
@@ -995,16 +995,16 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
-  '@icebreakers/eslint-config@2.0.3':
-    resolution: {integrity: sha512-IJ8VWNqrBYWMe+FUkZZjNZ2Vllu//En09oO3vf/TpIUDQaYku13V0qDddXygg/APywPqLDEG/EXZCt35Y8p6KA==}
+  '@icebreakers/eslint-config@2.1.0':
+    resolution: {integrity: sha512-um8VAc90+WaI9/IhQIwKajl5EV8R/4qJCnLhwdh41FX1ibEao0AkPiMhAzr82AlUNidH9JWNMCTfUbEbOFdo/w==}
     peerDependencies:
       eslint-plugin-pnpm: ^1.4.3
     peerDependenciesMeta:
       eslint-plugin-pnpm:
         optional: true
 
-  '@icebreakers/stylelint-config@2.1.2':
-    resolution: {integrity: sha512-HSGV74jYph3CgHvGgnnyuIRFS+oszh9WtLgdyRc/zcLQM8FrBylZIe/CNv9mybHZ3+lSsVqvakSxUdGXBWrGxw==}
+  '@icebreakers/stylelint-config@2.2.0':
+    resolution: {integrity: sha512-lLz8e52u92TI5SDF09lOtkYp540l59lLSaGJaiRSH9zsvRholhKJSnngLx37/7zcCWtUM6xZN9APFdwQTS/m4w==}
     hasBin: true
 
   '@isaacs/cliui@8.0.2':
@@ -3088,9 +3088,6 @@ packages:
 
   get-tsconfig@4.13.0:
     resolution: {integrity: sha512-1VKTZJCwBrvbd+Wn3AOgQP/2Av+TfTCOlE4AcRJE72W1ksZXbAx8PPBR9RzgTeSPzlPMHrbANMH3LbltH73wxQ==}
-
-  get-tsconfig@4.13.6:
-    resolution: {integrity: sha512-shZT/QMiSHc/YBLxxOkMtgSid5HFoauqCE3/exfsEcwg1WkeqjG+V40yBbBrsD+jW2HDXcs28xOfcbm2jI8Ddw==}
 
   get-tsconfig@4.13.7:
     resolution: {integrity: sha512-7tN6rFgBlMgpBML5j8typ92BKFi2sFQvIdpAqLA2beia5avZDrMs0FLZiM5etShWq5irVyGcGMEA1jcDaK7A/Q==}
@@ -6365,11 +6362,11 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@icebreakers/eslint-config@2.0.3(@typescript-eslint/rule-tester@8.56.1(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.57.0(typescript@5.9.3))(@typescript-eslint/utils@8.57.0(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.6)(eslint-plugin-pnpm@1.6.0(eslint@10.1.0(jiti@2.6.1)))(eslint@10.1.0(jiti@2.6.1))(globals@17.4.0)(postcss@8.5.8)(stylelint-order@8.1.1(stylelint@17.5.0(typescript@5.9.3)))(stylelint@17.5.0(typescript@5.9.3))(tailwindcss@3.4.11(ts-node@10.9.2(@types/node@24.12.0)(typescript@5.9.3)))(typescript@5.9.3)(vitest@4.1.2(@types/node@24.12.0)(vite@7.2.7(@types/node@24.12.0)(jiti@2.6.1)(terser@5.33.0)(tsx@4.21.0)(yaml@2.8.2)))':
+  '@icebreakers/eslint-config@2.1.0(@typescript-eslint/rule-tester@8.56.1(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.57.0(typescript@5.9.3))(@typescript-eslint/utils@8.57.0(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.6)(eslint-plugin-pnpm@1.6.0(eslint@10.1.0(jiti@2.6.1)))(eslint@10.1.0(jiti@2.6.1))(globals@17.4.0)(postcss@8.5.8)(stylelint-order@8.1.1(stylelint@17.5.0(typescript@5.9.3)))(stylelint@17.5.0(typescript@5.9.3))(tailwindcss@3.4.11(ts-node@10.9.2(@types/node@24.12.0)(typescript@5.9.3)))(typescript@5.9.3)(vitest@4.1.2(@types/node@24.12.0)(vite@7.2.7(@types/node@24.12.0)(jiti@2.6.1)(terser@5.33.0)(tsx@4.21.0)(yaml@2.8.2)))':
     dependencies:
       '@antfu/eslint-config': 7.7.3(@eslint-react/eslint-plugin@3.0.0(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3))(@next/eslint-plugin-next@16.2.1)(@typescript-eslint/rule-tester@8.56.1(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.57.0(typescript@5.9.3))(@typescript-eslint/utils@8.57.0(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3))(@unocss/eslint-plugin@66.6.7(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.6)(eslint-plugin-format@2.0.1(eslint@10.1.0(jiti@2.6.1)))(eslint-plugin-jsx-a11y@6.10.2(eslint@10.1.0(jiti@2.6.1)))(eslint-plugin-react-hooks@7.0.1(eslint@10.1.0(jiti@2.6.1)))(eslint-plugin-react-refresh@0.5.2(eslint@10.1.0(jiti@2.6.1)))(eslint-plugin-vuejs-accessibility@2.5.0(eslint@10.1.0(jiti@2.6.1))(globals@17.4.0))(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3)(vitest@4.1.2(@types/node@24.12.0)(vite@7.2.7(@types/node@24.12.0)(jiti@2.6.1)(terser@5.33.0)(tsx@4.21.0)(yaml@2.8.2)))
       '@eslint-react/eslint-plugin': 3.0.0(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3)
-      '@icebreakers/stylelint-config': 2.1.2(postcss@8.5.8)(stylelint-order@8.1.1(stylelint@17.5.0(typescript@5.9.3)))(stylelint@17.5.0(typescript@5.9.3))(tailwindcss@3.4.11(ts-node@10.9.2(@types/node@24.12.0)(typescript@5.9.3)))
+      '@icebreakers/stylelint-config': 2.2.0(postcss@8.5.8)(stylelint-order@8.1.1(stylelint@17.5.0(typescript@5.9.3)))(stylelint@17.5.0(typescript@5.9.3))(tailwindcss@3.4.11(ts-node@10.9.2(@types/node@24.12.0)(typescript@5.9.3)))
       '@next/eslint-plugin-next': 16.2.1
       '@tanstack/eslint-plugin-query': 5.95.2(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3)
       eslint-plugin-better-stylelint: 0.1.1(eslint@10.1.0(jiti@2.6.1))(stylelint@17.5.0(typescript@5.9.3))
@@ -6414,7 +6411,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@icebreakers/stylelint-config@2.1.2(postcss@8.5.8)(stylelint-order@8.1.1(stylelint@17.5.0(typescript@5.9.3)))(stylelint@17.5.0(typescript@5.9.3))(tailwindcss@3.4.11(ts-node@10.9.2(@types/node@24.12.0)(typescript@5.9.3)))':
+  '@icebreakers/stylelint-config@2.2.0(postcss@8.5.8)(stylelint-order@8.1.1(stylelint@17.5.0(typescript@5.9.3)))(stylelint@17.5.0(typescript@5.9.3))(tailwindcss@3.4.11(ts-node@10.9.2(@types/node@24.12.0)(typescript@5.9.3)))':
     dependencies:
       comment-json: 4.6.2
       postcss-html: 1.8.1
@@ -8314,7 +8311,7 @@ snapshots:
       enhanced-resolve: 5.20.1
       eslint: 10.1.0(jiti@2.6.1)
       eslint-plugin-es-x: 7.8.0(eslint@10.1.0(jiti@2.6.1))
-      get-tsconfig: 4.13.6
+      get-tsconfig: 4.13.7
       globals: 15.15.0
       globrex: 0.1.2
       ignore: 5.3.2
@@ -8850,10 +8847,6 @@ snapshots:
       get-intrinsic: 1.3.0
 
   get-tsconfig@4.13.0:
-    dependencies:
-      resolve-pkg-maps: 1.0.0
-
-  get-tsconfig@4.13.6:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
