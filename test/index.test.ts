@@ -1,8 +1,8 @@
-import { foo, wait } from '@/index'
+import { name, wait } from '../src/index'
 
 describe('[Default]', () => {
-  it('foo should be bar', () => {
-    expect(foo).toBe('bar')
+  it('exports the package name', () => {
+    expect(name).toBe('npm-lib-template')
   })
 
   it('wait 100ms', async () => {

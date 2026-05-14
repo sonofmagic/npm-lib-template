@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@10.33.4",
-  "description": "icebreaker's npm-lib-template",
+  "description": "A minimal TypeScript npm library template.",
   "author": "SonOfMagic <qq1324318532@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/sonofmagic/npm-lib-template#readme",
@@ -22,68 +22,41 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
-    "./package.json": "./package.json",
-    "./*": "./*"
+    "./package.json": "./package.json"
   },
   "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
-    }
-  },
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.mts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "dev": "tsup --watch --sourcemap",
-    "build:dev": "tsup --sourcemap",
-    "build": "tsup",
-    "test:dev": "vitest",
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "lint": "eslint src",
-    "lint:fix": "eslint src --fix",
-    "init:rename": "tsx scripts/init/rename.ts",
-    "init:bin": "tsx scripts/init/bin.ts",
-    "clean": "tsx scripts/clean.ts",
-    "ls:pack": "npm pack --dry-run",
-    "semantic-release": "semantic-release",
-    "prepare": "husky",
-    "commitlint": "commitlint --edit"
+    "lint:fix": "eslint src --fix"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
-    "@commitlint/cli": "^21.0.1",
-    "@commitlint/config-conventional": "^21.0.1",
-    "@commitlint/types": "^21.0.1",
     "@icebreakers/eslint-config": "^5.0.1",
     "@tsconfig/recommended": "^1.0.13",
-    "@types/fs-extra": "^11.0.4",
     "@types/node": "^24.12.4",
-    "@vitest/coverage-v8": "^4.1.6",
-    "cross-env": "^10.1.0",
-    "defu": "^6.1.7",
-    "del": "^8.0.1",
-    "es-toolkit": "^1.46.1",
     "eslint": "10.3.0",
-    "fs-extra": "^11.3.5",
-    "husky": "^9.1.7",
-    "lint-staged": "^17.0.4",
-    "pathe": "^2.0.3",
-    "semantic-release": "^25.0.3",
-    "tsup": "^8.5.1",
-    "tsx": "^4.21.0",
+    "tsdown": "^0.22.0",
     "typescript": "^5.9.3",
     "vitest": "^4.1.6"
   }

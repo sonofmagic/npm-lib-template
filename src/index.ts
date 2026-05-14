@@ -1,4 +1,4 @@
-export const foo = 'bar'
+export const name = 'npm-lib-template'
 
 export function wait(timeout?: number) {
   return new Promise((resolve) => {
@@ -7,7 +7,3 @@ export function wait(timeout?: number) {
     }, timeout)
   })
 }
-
-export const dirname = __dirname
-
-export * from '@/util'

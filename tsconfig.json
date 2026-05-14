@@ -2,15 +2,8 @@
   "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
     "target": "es6",
-    // path
-    "baseUrl": ".",
     "module": "esnext",
     "moduleResolution": "Bundler",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
     "types": [
       "vitest/globals",
       "node"
